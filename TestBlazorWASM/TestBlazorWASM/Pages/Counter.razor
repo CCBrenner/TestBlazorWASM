@@ -1,0 +1,13 @@
+﻿@page "/counter"
+@inject ICounterService CounterService
+
+<PageTitle>Counter - Test BlazorWASM</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Count: @CounterService.Count</p>
+
+Increment Amount:&nbsp;
+<input @bind="CounterService.IncrementAmount" />
+<br />
+<button class="btn btn-primary mt-3" @onclick="CounterService.IncrementCount">Increase Count</button>
