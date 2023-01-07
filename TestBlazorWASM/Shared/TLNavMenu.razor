@@ -1,0 +1,61 @@
+﻿<!-- TLNavMenu = Top Nav for Mobile, Left Nav for Desktop -->
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Test BlazorWASM</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="navmenu-bkg" @onclick="ToggleNavMenu"></div>
+
+<div class="@NavMenuCssClass navmenu-custom" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item">
+            <NavLink class="nav-link px-2" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span>Counter
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link px-2" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span>Fetch data
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link px-2" href="loadingspinners">
+                <span class="oi oi-plus" aria-hidden="true"></span>Loading Spinners
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link px-2" href="multipagedata">
+                <span class="oi oi-plus" aria-hidden="true"></span>Multi-Page Data
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link px-2" href="testpage">
+                <span class="oi oi-plus" aria-hidden="true"></span>Test Page
+            </NavLink>
+        </div>
+        @for(int i=0; i < 20; i++)
+        {
+            <div class="nav-item">
+                <NavLink class="nav-link px-2" href="#">
+                    <span class="oi oi-plus" aria-hidden="true"></span>Un-used NavItem
+                </NavLink>
+            </div>
+        }
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

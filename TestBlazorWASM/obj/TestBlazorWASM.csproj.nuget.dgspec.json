@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Collyn B - VotP\\source\\repos\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj": {}
+    "C:\\Users\\Collyn B - VotP\\Desktop\\Professional\\Software Engineering\\projects\\gh_clone_hosting\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Collyn B - VotP\\source\\repos\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj": {
+    "C:\\Users\\Collyn B - VotP\\Desktop\\Professional\\Software Engineering\\projects\\gh_clone_hosting\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Collyn B - VotP\\source\\repos\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj",
+        "projectUniqueName": "C:\\Users\\Collyn B - VotP\\Desktop\\Professional\\Software Engineering\\projects\\gh_clone_hosting\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj",
         "projectName": "TestBlazorWASM",
-        "projectPath": "C:\\Users\\Collyn B - VotP\\source\\repos\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj",
+        "projectPath": "C:\\Users\\Collyn B - VotP\\Desktop\\Professional\\Software Engineering\\projects\\gh_clone_hosting\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM.csproj",
         "packagesPath": "C:\\Users\\Collyn B - VotP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Collyn B - VotP\\source\\repos\\TestBlazorWASM\\TestBlazorWASM\\TestBlazorWASM\\obj\\",
+        "outputPath": "C:\\Users\\Collyn B - VotP\\Desktop\\Professional\\Software Engineering\\projects\\gh_clone_hosting\\TestBlazorWASM\\TestBlazorWASM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Collyn B - VotP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,14 +56,15 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.5, 6.0.5]"
+              "version": "[6.0.12, 6.0.12]"
             }
           ],
           "frameworkReferences": {
@@ -71,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
