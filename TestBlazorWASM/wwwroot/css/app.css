@@ -1,5 +1,7 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+/* start Custom CSS */
+
 :root {
     /* start Layout positioning values */
     --top-bar-height: 56px;  /* top */
@@ -12,6 +14,8 @@
     --sidebar-width-desktop: 220px;
     /* start Layout positioning values */
 }
+
+/* pause Custom CSS */
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -79,6 +83,8 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
+/* resume Custom CSS */
+
 .loading-container {
     display: flex;
     justify-content: center;
@@ -110,11 +116,6 @@ a, .btn-link {
     .loading-container {
         font-size: 4rem;
     }
-    .loader {
-        border: 6px solid lightgrey;
-        border-radius: 50%;
-        border-top: 6px solid blue;
-        width: 45px;
-        height: 45px;
-    }
 }
+
+/* end Custom CSS */
