@@ -1,4 +1,17 @@
-﻿    @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+:root {
+    /* start Layout positioning values */
+    --top-bar-height: 56px;  /* top */
+    --footer-height: 50px;  /* bottom */
+    --content-height: calc(100vh - calc(var(--top-bar-height) + var(--footer-height)));  /* middle */
+
+    --sidebar-width-mobile: 100vw;
+    --mobile-menu-height: calc(65vh - var(--top-bar-height)); /* In vh measurement only. */
+
+    --sidebar-width-desktop: 220px;
+    /* start Layout positioning values */
+}
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -66,13 +79,21 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 95vh;
+    font-size: 2rem;
+}
+
 .loader {
     border: 6px solid lightgrey;
     border-radius: 50%;
     border-top: 6px solid blue;
     width: 45px;
     height: 45px;
-    animation: spinner 1s linear infinite;
+    animation: spinner 1.5s linear infinite;
 }
 
 @keyframes spinner {
@@ -82,5 +103,18 @@ a, .btn-link {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 641px) {
+    .loading-container {
+        font-size: 4rem;
+    }
+    .loader {
+        border: 6px solid lightgrey;
+        border-radius: 50%;
+        border-top: 6px solid blue;
+        width: 45px;
+        height: 45px;
     }
 }
