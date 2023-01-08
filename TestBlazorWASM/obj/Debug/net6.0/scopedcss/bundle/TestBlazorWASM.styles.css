@@ -1,22 +1,91 @@
+/* /Pages/Counter.razor.rz.scp.css */
+.no-margin[b-x4jex87nq9] {
+    margin: 0px;
+}
+.count[b-x4jex87nq9] {
+    font-size: 2rem;
+}
+.sizeBtn[b-x4jex87nq9] {
+    background-color: orange;
+}
+.cube-container[b-x4jex87nq9] {
+    background-color: lightgrey;
+    border-radius: 8px;
+    padding: 4px;
+}
+.posicube-container[b-x4jex87nq9] {
+    align-self: end;
+
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    align-content: end;
+}
+.negacube-container[b-x4jex87nq9] {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: start;
+}
+.cube[b-x4jex87nq9] {
+    margin: 1px;
+    display: inline-block;
+}
+.posicube[b-x4jex87nq9] {
+    background-color: green;
+}
+.negacube[b-x4jex87nq9] {
+    background-color: darkred;
+}
+
+/* controlled via razor class (C# adds and removes classes to element) */
+.xsCubeSize[b-x4jex87nq9] {
+    width: 3px;
+    height: 3px;
+}
+.sCubeSize[b-x4jex87nq9] {
+    width: 5px;
+    height: 5px;
+}
+.mCubeSize[b-x4jex87nq9] {
+    width: 7px;
+    height: 7px;
+}
+.lCubeSize[b-x4jex87nq9] {
+    width: 10px;
+    height: 10px;
+}
+.xlCubeSize[b-x4jex87nq9] {
+    width: 15px;
+    height: 15px;
+}
 /* /Pages/LoadingSpinner.razor.rz.scp.css */
+.spinner-container[b-sb2pacjyuh] {
+    justify-content: center;
+    align-content: center;
+    height: calc(var(--content-height) - 18px);
+    font-size: 3.5em;
+}
+
 .loader1[b-sb2pacjyuh] {
     margin: auto;
     border: 6px solid lightgrey;
     border-radius: 50%;
     border-top: 6px solid blue;
-    width: 80px;
-    height: 80px;
-    animation: spinner-b-sb2pacjyuh 1s linear infinite;
+    width: 70px;
+    height: 70px;
+    animation: anti-spinner-b-sb2pacjyuh 1s linear infinite;
 }
 .loader2[b-sb2pacjyuh] {
     margin: auto;
     border: 6px solid lightgrey;
-    /*border-radius: 50%;*/
+    /*border-radius: 50%;*/  /* compare this class with .loader1 - notice anything? */
     border-top: 6px solid red;
     width: 80px;
     height: 80px;
     animation: spinner-b-sb2pacjyuh 1s linear infinite;
 }
+
 .loader3[b-sb2pacjyuh] {
     margin: auto;
     border: 14px solid green;
@@ -33,20 +102,30 @@
     margin: auto;
     border: 30px solid pink;
     border-radius: 50%;
-    border-top: 9px solid pink;
-    border-bottom: 6px solid pink;
+    border-top: 10px solid pink;
+    border-bottom: 10px solid pink;
     width: 80px;
-    height: 130px;
-    animation: spinner-b-sb2pacjyuh 1s linear infinite;
+    height: 120px;
+    animation: anti-spinner-b-sb2pacjyuh 1s linear infinite;
 }
 
 @keyframes spinner-b-sb2pacjyuh {
     0% {
-        transform: rotate(180deg);
+        transform: rotate(360deg);
     }
 
     100% {
-        transform: rotate(540deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes anti-spinner-b-sb2pacjyuh {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(450deg);
     }
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
@@ -192,6 +271,23 @@ footer[b-g6mc1a6g3y] {
 
 .navbar-brand[b-q4adwcw0dk] {
     font-size: 1.1rem;
+    width: var(--sidebar-width-mobile);
+}
+
+.navbar-toggler[b-q4adwcw0dk] {
+    color: rgba(0,0,0,0.0);  /* hack for removing button's focused outline = make it 100% transparent */
+    border-radius: 50%;
+    background-image: linear-gradient(145deg, rgb(5, 39, 103) -5%, red 120%);
+    position: fixed;
+    bottom: calc(var(--footer-height) + 8px);
+    right: 8px;
+    width: 60px;
+    height: 60px;
+    padding: 9px;
+    padding-left: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .oi[b-q4adwcw0dk] {
@@ -227,7 +323,7 @@ nav[b-q4adwcw0dk] {
     .nav-item[b-q4adwcw0dk]  a {
         color: #d7d7d7;
         border-radius: 4px;
-        height: 2.6rem;
+        height: 3rem;
         display: flex;
         align-items: center;
         line-height: 3rem;
@@ -270,12 +366,15 @@ nav[b-q4adwcw0dk] {
 
     /* start Desktop view */
 
+    .navbar-brand[b-q4adwcw0dk] {
+        width: auto;
+    }
+
     .navbar-toggler[b-q4adwcw0dk] {
         display: none;
     }
 
     .collapse[b-q4adwcw0dk] {
-        /* Never collapse the sidebar for wide screens */
         display: block;
     }
 

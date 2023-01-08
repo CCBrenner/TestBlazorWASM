@@ -14,6 +14,23 @@
 
 .navbar-brand[b-q4adwcw0dk] {
     font-size: 1.1rem;
+    width: var(--sidebar-width-mobile);
+}
+
+.navbar-toggler[b-q4adwcw0dk] {
+    color: rgba(0,0,0,0.0);  /* hack for removing button's focused outline = make it 100% transparent */
+    border-radius: 50%;
+    background-image: linear-gradient(145deg, rgb(5, 39, 103) -5%, red 120%);
+    position: fixed;
+    bottom: calc(var(--footer-height) + 8px);
+    right: 8px;
+    width: 60px;
+    height: 60px;
+    padding: 9px;
+    padding-left: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .oi[b-q4adwcw0dk] {
@@ -49,7 +66,7 @@ nav[b-q4adwcw0dk] {
     .nav-item[b-q4adwcw0dk]  a {
         color: #d7d7d7;
         border-radius: 4px;
-        height: 2.6rem;
+        height: 3rem;
         display: flex;
         align-items: center;
         line-height: 3rem;
@@ -92,12 +109,15 @@ nav[b-q4adwcw0dk] {
 
     /* start Desktop view */
 
+    .navbar-brand[b-q4adwcw0dk] {
+        width: auto;
+    }
+
     .navbar-toggler[b-q4adwcw0dk] {
         display: none;
     }
 
     .collapse[b-q4adwcw0dk] {
-        /* Never collapse the sidebar for wide screens */
         display: block;
     }
 

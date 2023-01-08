@@ -4,17 +4,19 @@
     <div class="top-row navbar navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="">Test BlazorWASM</a>
+            <!-- start Floating button -->
             <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- end Floating button -->
         </div>
     </div>
 
-    <div class="@NavMenuCssClass navcontainer-custom" @onclick="ToggleNavMenu">
+    <div class="@custDisplayBlock navcontainer-custom" @onclick="ToggleNavMenu">
         <nav class="colorful-menu">
             <div class="nav-item">
                 <NavLink class="nav-link" href="#">
-                    <span class="oi oi-plus" aria-hidden="true"></span>First NavItem
+                    <span class="oi oi-plus" aria-hidden="true"></span>First Item (H)
                 </NavLink>
             </div>
             <div class="nav-item">
@@ -46,27 +48,16 @@
             {
                 <div class="nav-item">
                     <NavLink class="nav-link" href="#">
-                        <span class="oi oi-plus" aria-hidden="true"></span>Un-used NavItem
+                        <span class="oi oi-plus" aria-hidden="true"></span>Blank Item (H)
                     </NavLink>
                 </div>
             }
             <div class="nav-item">
                 <NavLink class="nav-link" href="#">
-                    <span class="oi oi-plus" aria-hidden="true"></span>Last NavItem
+                    <span class="oi oi-plus" aria-hidden="true"></span>Last Item (H)
                 </NavLink>
             </div>
         </nav>
         <div class="navmenu-negative"></div>
     </div>
 </div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
