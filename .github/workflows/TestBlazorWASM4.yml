@@ -44,5 +44,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.TestBlazorWASM4_5FBC }}
+        publish-profile: ${{ secrets.TestBlazorWASM4_2E9F }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}

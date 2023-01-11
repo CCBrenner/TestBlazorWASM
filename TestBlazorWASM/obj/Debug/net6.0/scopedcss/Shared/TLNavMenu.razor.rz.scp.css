@@ -18,16 +18,14 @@
 }
 
 .navbar-toggler[b-q4adwcw0dk] {
-    color: rgba(0,0,0,0.0);  /* hack for removing button's focused outline = make it 100% transparent */
-    border-radius: 50%;
+    color: rgba(0,0,0,0.0); /* hack for removing button's focused outline = make it 100% transparent */
     background-image: linear-gradient(145deg, rgb(5, 39, 103) -5%, red 120%);
+    border-radius: 50%;
     position: fixed;
     bottom: calc(var(--footer-height) + 8px);
     right: 8px;
     width: 60px;
     height: 60px;
-    padding: 9px;
-    padding-left: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
